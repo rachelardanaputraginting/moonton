@@ -5,7 +5,6 @@ import { Head } from "@inertiajs/react";
 import Flickity from "react-flickity-component";
 
 export default function Dashboard({featuredMovies, movies, ...props}) {
-    console.log(movies);
     const flickcityOptions = {
         "cellAlign": "left",
         "contain": true,
