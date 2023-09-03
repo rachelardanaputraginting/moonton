@@ -1,6 +1,6 @@
 import Button from "./Button";
 
-export default function SubscriptionCard({ id, name, price, durationInMonth, features, isPremium, onSelectSupscription }) {
+export default function SubscriptionCard({ id, name, price, durationInMonth, features, isPremium, onSelectSubscription }) {
     return (
         <>
             {/* Basic */}
@@ -12,7 +12,7 @@ export default function SubscriptionCard({ id, name, price, durationInMonth, fea
                         <div className="text-[28px] font-bold">
                             IDR {price.toLocaleString()}
                         </div>
-                        <p className="text-gray-1 text-xs font-light">/{durationInMonth} months</p>
+                        <p className="text-gray-1 text-xs font-light">{durationInMonth} months</p>
                     </div>
                     {/* Mid Content: Benefits */}
                     <div className="flex flex-col gap-4">
@@ -27,7 +27,7 @@ export default function SubscriptionCard({ id, name, price, durationInMonth, fea
                     </div>
                     {/* Bottom: CTA Button */}
                     <div>
-                        <Button onClick={onSelectSupscription} type="button" variant="white-outline">
+                        <Button onClick={onSelectSubscription} type="button" variant="white-outline">
                             <span className="text-base">Start {name}</span>
                         </Button>
                     </div>
@@ -62,7 +62,7 @@ export default function SubscriptionCard({ id, name, price, durationInMonth, fea
                     </div>
                     {/* Bottom: CTA Button */}
                     <div>
-                        <Button onClick={onSelectSupscription} type="button" variant="primary">
+                        <Button onClick={onSelectSubscription} type="submit" variant="primary">
                             <span className="text-base font-semibold">Subscribe Now</span>
                         </Button>
                     </div>
